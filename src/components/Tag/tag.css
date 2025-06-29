@@ -1,0 +1,17 @@
+.tag-container {
+  &.pink {
+    background-color: var(--colors-pink);
+  }
+
+  &.blue {
+    background-color: var(--colors-blue);
+  }
+
+  &.green {
+    background-color: var(--colors-green);
+  }
+
+  &.yellow {
+    background-color: var(--colors-yellow);
+  }
+}
