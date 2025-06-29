@@ -1,7 +1,9 @@
 import './tag.css';
 
+export type Colors = 'pink' | 'blue' | 'green' | 'yellow';
+
 interface TagProp {
-  color: 'pink' | 'blue' | 'green' | 'yellow';
+  color: Colors;
   text: string;
   small?: boolean;
 }
