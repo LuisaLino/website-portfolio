@@ -1,18 +1,7 @@
 import { easeInOut, motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import useBreakpoint from 'use-breakpoint';
 import ArrowButton from './Button';
-import Tag from './Tag/tag';
-
-const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 };
-
-const CurrentBreakpoint = () => {
-  const { breakpoint, maxWidth, minWidth } = useBreakpoint(
-    BREAKPOINTS,
-    'desktop'
-  );
-  return breakpoint;
-};
+import Tag, { type Colors } from './Tag/tag';
 
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef(null);
@@ -48,7 +37,17 @@ const HorizontalScrollCarousel = () => {
   );
 };
 
-const Card = ({ card }) => {
+const Card = ({
+  card,
+}: {
+  card: {
+    id: number;
+    link: string;
+    imgUrl: string;
+    title: string;
+    tags: Array<{ color: Colors; text: string }>;
+  };
+}) => {
   return (
     <a href={`/projects/${card.link}`}>
       <div
@@ -80,7 +79,13 @@ const Card = ({ card }) => {
 
 export default HorizontalScrollCarousel;
 
-const cards = [
+const cards: Array<{
+  id: number;
+  link: string;
+  imgUrl: string;
+  title: string;
+  tags: Array<{ color: Colors; text: string }>;
+}> = [
   {
     link: '1',
     imgUrl: 'src/assets/images/carousel_image_1.png',

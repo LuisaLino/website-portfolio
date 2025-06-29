@@ -1,7 +1,6 @@
 const ArrowButton = ({
   link,
   text,
-  small,
 }: {
   link: string;
   text: string;

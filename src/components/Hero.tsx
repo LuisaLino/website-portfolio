@@ -1,9 +1,9 @@
 import heroImg from '../assets/images/Hero.svg';
 import luisaImg from '../assets/images/Luisa_Lino.png';
 
-import Tag from './Tag/tag';
+import Tag, { type Colors } from './Tag/tag';
 
-const tags = [
+const tags: Array<{ text: string; color: Colors }> = [
   {
     text: 'Graphic Design',
     color: 'pink',
