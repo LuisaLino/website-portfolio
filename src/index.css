@@ -306,6 +306,18 @@ figcaption {
   display: grid;
 }
 
+._50-ch-max {
+  max-width: 50ch;
+}
+
+._50ch-headline-wrap {
+  max-width: 50ch;
+}
+
+.block-quote {
+  border-left-width: 2px;
+}
+
 @media screen and (max-width: 991px) {
   h4 {
     font-size: 1.5rem;

@@ -14,10 +14,15 @@ const HorizontalScrollCarousel = () => {
   });
 
   return (
-    <section ref={targetRef} className='relative h-[400vh]'>
-      <div className='sticky top-0 grid grid-rows-2 h-screen items-center overflow-hidden'>
-        <div className='flex max-w-screen px-8  items-center justify-between'>
-          <h2 className='text-[40px] font-body'>Selected Projects</h2>
+    <section
+      ref={targetRef}
+      className='relative md:py-30 h-[300vh] md:h-[400vh]'
+    >
+      <div className='sticky top-0 flex flex-col h-screen  justify-center items-start overflow-hidden'>
+        <div className='flex max-w-screen w-[100%] md:px-8 px-4 items-center justify-between'>
+          <h2 className='md:!text-[40px] !text-3xl font-body'>
+            Selected Projects
+          </h2>
           <ArrowButton link='/projects' text='View All' />
         </div>
 
@@ -26,7 +31,7 @@ const HorizontalScrollCarousel = () => {
             x,
             transform: `translate3d(${x}%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
           }}
-          className='flex gap-4 -mt-[230px]'
+          className='flex gap-4 mt-8'
         >
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
@@ -52,7 +57,7 @@ const Card = ({
     <a href={`/projects/${card.link}`}>
       <div
         key={card.id}
-        className='group relative lg:h-[514px] lg:w-[688px] w-[345px] overflow-hidden '
+        className='group relative lg:h-[514px] lg:w-[688px] w-[400px] overflow-hidden '
       >
         <div className='absolute top-4 left-4 flex gap-2'>
           {card.tags.map((item) => (

@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-card-pink: #ffb2bf;
+  --color-card-green: #b8d1b9;
+  --color-card-blue: #abceff;
+  --color-card-yellow: #ffdaa3;
+}
