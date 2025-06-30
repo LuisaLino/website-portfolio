@@ -1,10 +1,9 @@
 import ArrowButton from '../components/Button';
-import '../css/luisas-website.css';
 
 export default function NotFound() {
   return (
-    <div className='utility-page-wrap'>
-      <div className='utility-page-content'>
+    <div className='flex w-screen max-h-full max-w-full h-screen items-center justify-center'>
+      <div className='flex max-w-[32rem] items-center justify-center flex-col gap-[2rem] text-center'>
         <div className='display-large'>Page Not Found</div>
         <h2 className='display-8xl'>404</h2>
         <div className='_50-ch-max'>

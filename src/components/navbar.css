@@ -15,9 +15,6 @@
   column-gap: 2em;
 }
 
-.nav-link-list {
-}
-
 .nav-link {
   font-family: var(--secondary);
   text-align: left;

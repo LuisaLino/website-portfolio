@@ -3,6 +3,11 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Navbar from '../components/Navbar';
 
+const serviceCard =
+  'rounded-lg flex p-8 md:h-[350px] h-[300px] items-center flex-col whitespace-normal justify-center';
+
+const serviceCardItem = 'flex flex-col gap-4';
+
 export default function Homepage() {
   return (
     <>
@@ -13,13 +18,15 @@ export default function Homepage() {
 
           <HorizontalScrollCarousel />
 
-          {/* HOW WE WORK SECTION */}
-          <div className='grid mx-auto grid-cols-5 px-[10rem] pt-[8rem]'>
+          {/* HOW I WORK SECTION */}
+          <div className='md:grid mx-auto md:grid-cols-5 flex flex-col px-4 gap-8 pt-[4px] md:pb-[8rem] md:pt-[3rem]'>
             <h4 className='col-span-2'>↳ How I work</h4>
-            <div className='flex col-span-3 gap-20'>
-              <div className='flex max-w-[50ch] flex-col gap-6'>
-                <div className='display-2xl'>My Approach</div>
-                <p>
+            <div className='flex flex-col md:flex-row md:col-span-3 gap-12 md:gap-20'>
+              <div className='flex max-w-[50ch] flex-col md:gap-6 gap-2'>
+                <div className='md:display-2xl text-xl font-medium'>
+                  My Approach
+                </div>
+                <p className='!text-base md:!text-lg'>
                   I see design as a way of transforming spaces, creating objects
                   and providing experiences. I like to think that my work can
                   help improve people's lives and I'm always looking for new
@@ -27,9 +34,11 @@ export default function Homepage() {
                 </p>
               </div>
 
-              <div className='flex max-w-[50ch] flex-col gap-6'>
-                <div className='display-2xl'>What to Expect</div>
-                <p>
+              <div className='flex max-w-[50ch] flex-col md:gap-6 gap-2'>
+                <div className='md:display-2xl text-xl font-medium'>
+                  What to Expect
+                </div>
+                <p className='!text-base md:!text-lg'>
                   Thoughtful, purpose-driven design process that goes beyond
                   aesthetics. I bring creativity, responsibility, and
                   sensitivity to everything I do — always aiming to contribute
@@ -42,80 +51,74 @@ export default function Homepage() {
 
         {/* WHAT I DO SECTION */}
         <div className='section'>
-          <div className='container'>
-            <div className='text-wrap'>
-              <h2 className='font-body !text-[40px]'>What I Do</h2>
-            </div>
-            <div className='service-cards-wrap'>
-              <div className='service-cards-row'>
+          <div className='container py-[12rem] md:py-[10rem]'>
+            <h2 className='font-body md:!text-[40px] !text-3xl'>What I Do</h2>
+            <div className='grid mx-auto grid-cols-1 md:grid-cols-2 gap-6'>
+              <div className='service-cards-row grid grid-rows-2 gap-6'>
                 <div
-                  data-delay='0'
-                  data-hover='true'
-                  className='service-card-item w-dropdown'
+                  className={serviceCard}
+                  style={{ backgroundColor: 'var(--colors-pink)' }}
                 >
-                  <div className='service-card _1 w-dropdown-toggle'>
-                    <div className='card-top-wrapper'>
-                      <h3 className='display-2xl'>Graphic Design</h3>
-                      <div>
-                        Design is more than just making things look good — it's
-                        about clear communication, creating emotion, and
-                        building connection. As a graphic designer, I help
-                        brands and individuals bring their ideas to life through
-                        thoughtful, intentional visuals.
-                      </div>
+                  <div className={serviceCardItem}>
+                    <h3 className='md:display-2xl text-xl font-medium'>
+                      Graphic Design
+                    </h3>
+                    <div className='!text-base md:!text-xl'>
+                      Design is more than just making things look good — it's
+                      about clear communication, creating emotion, and building
+                      connection. As a graphic designer, I help brands and
+                      individuals bring their ideas to life through thoughtful,
+                      intentional visuals.
                     </div>
                   </div>
                 </div>
 
                 <div
-                  data-delay='0'
-                  data-hover='true'
-                  className='service-card-item w-dropdown'
+                  className={serviceCard}
+                  style={{ backgroundColor: 'var(--colors-green)' }}
                 >
-                  <div className='service-card _2 w-dropdown-toggle'>
-                    <div className='card-top-wrapper'>
-                      <h3 className='display-2xl'>User Research</h3>
-                      <div>
-                        Every design begins with understanding. I dive into
-                        people’s stories, needs, and behaviors to uncover the
-                        quiet truths that guide meaningful solutions.
-                      </div>
+                  <div className={serviceCardItem}>
+                    <h3 className='md:display-2xl text-xl font-medium'>
+                      User Research
+                    </h3>
+                    <div className='!text-base md:!text-xl'>
+                      Every design begins with understanding. I dive into
+                      people’s stories, needs, and behaviors to uncover the
+                      quiet truths that guide meaningful solutions.
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className='service-cards-row'>
+              <div className='grid grid-rows-2 gap-6'>
                 <div
-                  data-delay='0'
-                  data-hover='true'
-                  className='service-card-item w-dropdown'
+                  className={serviceCard}
+                  style={{ backgroundColor: 'var(--colors-blue)' }}
                 >
-                  <div className='service-card _3 w-dropdown-toggle'>
-                    <div className='card-top-wrapper'>
-                      <h3 className='display-2xl'>UI/UX Design</h3>
-                      <div>
-                        Involves designing the structure and interface of
-                        digital products to provide intuitive, accessible, and
-                        meaningful user experiences.
-                      </div>
+                  <div className={serviceCardItem}>
+                    <h3 className='md:display-2xl text-xl font-medium'>
+                      UI/UX Design
+                    </h3>
+                    <div className='!text-base md:!text-xl'>
+                      Involves designing the structure and interface of digital
+                      products to provide intuitive, accessible, and meaningful
+                      user experiences.
                     </div>
                   </div>
                 </div>
+
                 <div
-                  data-delay='0'
-                  data-hover='true'
-                  className='service-card-item w-dropdown'
+                  className={serviceCard}
+                  style={{ backgroundColor: 'var(--colors-yellow)' }}
                 >
-                  <div className='service-card _4 w-dropdown-toggle'>
-                    <div className='card-top-wrapper'>
-                      <h3 className='display-2xl'>Visual Design</h3>
-                      <div>
-                        Focuses on the aesthetics of a product or interface,
-                        ensuring visual harmony, consistency, and clarity
-                        through the use of color, typography, imagery, and
-                        layout.
-                      </div>
+                  <div className={serviceCardItem}>
+                    <h3 className='md:display-2xl text-xl font-medium'>
+                      Visual Design
+                    </h3>
+                    <div className='!text-base md:!text-xl'>
+                      Focuses on the aesthetics of a product or interface,
+                      ensuring visual harmony, consistency, and clarity through
+                      the use of color, typography, imagery, and layout.
                     </div>
                   </div>
                 </div>
