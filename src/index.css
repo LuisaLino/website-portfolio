@@ -89,8 +89,6 @@
 }
 
 body {
-  background-color: var(--colors--stone);
-  font-family: var(--secondary);
   letter-spacing: 0em;
   font-weight: 400;
   line-height: 1.3;
@@ -99,8 +97,10 @@ body {
     var(--fluid-font-size--base),
     var(--fluid-font-size--base)
   );
-  overscroll-behavior: none;
+  background-color: var(--colors--stone);
+  font-family: var(--secondary);
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -110,7 +110,7 @@ h1 {
   margin-bottom: 0;
   font-size: 3rem;
   font-weight: 400;
-  line-height: 0.9;
+  line-height: 120%;
 }
 
 h2 {
@@ -214,7 +214,6 @@ figcaption {
 }
 
 .display-xs {
-  letter-spacing: -0.04em;
   font-size: clamp(
     var(--font-size--xs),
     var(--fluid-font-size--xs),
@@ -295,6 +294,16 @@ figcaption {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+}
+
+.section {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.section.intro {
+  border-radius: var(--corners--small);
+  padding-top: 12em;
 }
 
 .w-layout-grid {
@@ -540,10 +549,6 @@ figcaption {
 
   .display-6xl {
     font-size: var(--font-size--3xl);
-  }
-
-  .display-2xl {
-    font-size: var(--font-size--base);
   }
 
   .display-xl {

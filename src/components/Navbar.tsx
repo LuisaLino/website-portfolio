@@ -87,8 +87,17 @@ export default function Navbar() {
 
           {/* Desktop Nav (hidden on mobile) */}
           <div className='hidden lg:flex gap-8 items-center'>
+            <a
+              key='Home'
+              href='/'
+              className='nav-link w-max'
+              style={{
+                fontWeight: pathname === '/' ? 500 : 400,
+              }}
+            >
+              Home
+            </a>
             {[
-              { path: '/', label: 'Home' },
               { path: '/projects', label: 'Projects' },
               { path: '/about-me', label: 'About Me' },
               { path: '/contacts', label: 'Contacts' },
@@ -109,7 +118,9 @@ export default function Navbar() {
         </div>
       </article>
       <div
-        className='bg-[#00000096] z-40 h-screen w-screen absolute top-0 right-0 transition-all duration-300 ease-in-out'
+        className={`bg-[#00000096] z-40 h-screen w-screen absolute top-0 right-0 transition-all duration-300 ease-in-out ${
+          menuOpen ? '-translate-y-0' : '-translate-y-80'
+        }`}
         style={{ opacity: menuOpen ? '1' : '0' }}
       ></div>
     </section>
