@@ -7,7 +7,7 @@ import Homepage from './pages/Home';
 export const router = createBrowserRouter([
   {
     path: '/',
-    errorElement: <NotFound />,
+    // errorElement: <NotFound />,
     element: <MainLayout />,
     children: [
       {
@@ -19,5 +19,9 @@ export const router = createBrowserRouter([
         element: <AboutMe />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ]);
