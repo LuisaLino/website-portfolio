@@ -9,7 +9,7 @@ const textWrapper = 'text-2xl leading-0.5';
 
 export default function Footer() {
   return (
-    <div className='pb-[1rem]'>
+    <div className='md:pt-[5rem] pt-[3rem] pb-[1rem]'>
       <div className='container'>
         <div id='Footer' className='flex gap-[4rem] flex-col'>
           <div className='grid md:grid-rows-1 lg:grid-cols-7 grid-rows-3 gap-4 lg:gap-6 grid-cols-1 md:grid-cols-3'>
