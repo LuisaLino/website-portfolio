@@ -6,7 +6,7 @@ export default ({ mode }: { mode: string }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return defineConfig({
-    base: '/',
+    base: 'https://luisalino.github.io/website-portfolio/',
     plugins: [react(), tailwindcss()],
     server: {
       cors: true,
