@@ -2,6 +2,12 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './navbar.css';
 
+const links = [
+  { path: '/projects', label: 'Projects' },
+  { path: '/about-me', label: 'About Me' },
+  { path: '/contacts', label: 'Contacts' },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -65,23 +71,20 @@ export default function Navbar() {
             } lg:hidden`}
           >
             <nav className='flex flex-col gap-4 py-4 text-right'>
-              {[
-                { path: '/', label: 'Home' },
-                { path: '/projects', label: 'Projects' },
-                { path: '/about-me', label: 'About Me' },
-                { path: '/contacts', label: 'Contacts' },
-              ].map(({ path, label }) => (
-                <Link
-                  key={path}
-                  to={path}
-                  className='text-2xl'
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <div className='border-b-gray-500 w-[120px] border-b-1 border-dashed pb-0.5'>
-                    {label}
-                  </div>
-                </Link>
-              ))}
+              {[{ path: '/', label: 'Home' }, ...links].map(
+                ({ path, label }) => (
+                  <Link
+                    key={path}
+                    to={path}
+                    className='text-2xl'
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <div className='border-b-gray-500 w-[120px] border-b-1 border-dashed pb-0.5'>
+                      {label}
+                    </div>
+                  </Link>
+                )
+              )}
             </nav>
           </div>
 
@@ -97,11 +100,7 @@ export default function Navbar() {
             >
               Home
             </Link>
-            {[
-              { path: '/projects', label: 'Projects' },
-              { path: '/about-me', label: 'About Me' },
-              { path: '/contacts', label: 'Contacts' },
-            ].map(({ path, label }) => (
+            {links.map(({ path, label }) => (
               <Link
                 key={path}
                 to={path}

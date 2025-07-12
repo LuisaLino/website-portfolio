@@ -1,5 +1,8 @@
 import { easeInOut, motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import image1 from '../assets/images/carousel_image_1.png';
+import image2 from '../assets/images/carousel_image_2.png';
+import imageVizzi from '../assets/images/carousel_image_vizzi.png';
 import ArrowButton from './Button';
 import { ProjectItem } from './ProjectItem';
 import { type Colors } from './Tag/tag';
@@ -54,7 +57,7 @@ const cards: Array<{
 }> = [
   {
     link: '1',
-    imgUrl: 'src/assets/images/carousel_image_1.png',
+    imgUrl: image1,
     title: 'Title Lorem ipsum egestas at in pellentesque eu.',
     id: 1,
     tags: [
@@ -70,7 +73,7 @@ const cards: Array<{
   },
   {
     link: '2',
-    imgUrl: 'src/assets/images/carousel_image_2.png',
+    imgUrl: image2,
     title: 'Lorem ipsum egestas at in pellentesque eu.',
     id: 2,
     tags: [
@@ -86,7 +89,7 @@ const cards: Array<{
   },
   {
     link: 'vizzi-backoffice-ui-redesign',
-    imgUrl: 'src/assets/images/carousel_image_vizzi.png',
+    imgUrl: imageVizzi,
     title: 'Vizzi | Backoffice UI Redesign',
     id: 3,
     tags: [
@@ -102,7 +105,7 @@ const cards: Array<{
   },
   {
     link: '3',
-    imgUrl: 'src/assets/images/carousel_image_1.png',
+    imgUrl: image1,
     title: 'Lorem ipsum egestas at in pellentesque eu.',
     id: 4,
     tags: [
