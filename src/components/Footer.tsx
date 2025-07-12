@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { CustomLinkText } from './LinkText';
 
 const footerListWrap =
@@ -14,17 +15,17 @@ export default function Footer() {
         <div id='Footer' className='flex gap-[4rem] flex-col'>
           <div className='grid md:grid-rows-1 lg:grid-cols-7 grid-rows-3 gap-4 lg:gap-6 grid-cols-1 md:grid-cols-3'>
             <div className='flex flex-col items-start gap-8 justify-start md:col-span-3'>
-              <a href='/' aria-current='page'>
+              <Link to='/' aria-current='page'>
                 <h2 className='md:!text-[2rem] !text-3xl'>Luísa Lino</h2>
-              </a>
+              </Link>
               <div className='flex flex-col gap-2'>
                 <p className='md:text-xl !text-lg'>(+351) 910 399 982</p>
-                <a href='mailto:luisarochalino@gmail.com' aria-current='page'>
+                <Link to='mailto:luisarochalino@gmail.com' aria-current='page'>
                   <CustomLinkText
                     buttonText='luisarochalino@gmail.com'
                     textSize='md:text-xl !text-lg'
                   />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -66,19 +67,19 @@ export default function Footer() {
                 </div>
               </div>
               <div className={footerListWrapper}>
-                <a href='/' aria-current='page' className={textWrapper}>
+                <Link to='/' aria-current='page' className={textWrapper}>
                   <CustomLinkText buttonText='Home' />
-                </a>
-                <a href='/projects' className={textWrapper}>
+                </Link>
+                <Link to='/projects' className={textWrapper}>
                   <CustomLinkText buttonText='Project' />
-                </a>
-                <a href='/about-me' className={textWrapper}>
+                </Link>
+                <Link to='/about-me' className={textWrapper}>
                   <CustomLinkText buttonText='About me' />
-                </a>
+                </Link>
 
-                <a href='/contacts' className={textWrapper}>
+                <Link to='/contacts' className={textWrapper}>
                   <CustomLinkText buttonText='Contacts' />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

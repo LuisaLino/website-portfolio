@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import type { Colors } from './Tag/tag';
 import Tag from './Tag/tag';
 
@@ -13,7 +14,7 @@ export const ProjectItem = ({
   };
 }) => {
   return (
-    <a href={`/projects/${card.link}`}>
+    <Link to={`/projects/${card.link}`}>
       <div
         key={card.id}
         className='group relative lg:h-[514px] lg:w-[688px] w-[400px] overflow-hidden '
@@ -37,6 +38,6 @@ export const ProjectItem = ({
           </p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };

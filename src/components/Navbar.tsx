@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './navbar.css';
 
 export default function Navbar() {
@@ -30,9 +30,9 @@ export default function Navbar() {
           }}
         >
           <div className='flex items-center justify-between w-full'>
-            <a href='/' className='logo-link w-inline-block w--current'>
+            <Link to='/' className='logo-link w-inline-block w--current'>
               <h2 className='display-xl'>Luísa Lino</h2>
-            </a>
+            </Link>
 
             {/* Burger Icon: visible only on mobile */}
             <button
@@ -71,40 +71,40 @@ export default function Navbar() {
                 { path: '/about-me', label: 'About Me' },
                 { path: '/contacts', label: 'Contacts' },
               ].map(({ path, label }) => (
-                <a
+                <Link
                   key={path}
-                  href={path}
+                  to={path}
                   className='text-2xl'
                   onClick={() => setMenuOpen(false)}
                 >
                   <div className='border-b-gray-500 w-[120px] border-b-1 border-dashed pb-0.5'>
                     {label}
                   </div>
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
 
           {/* Desktop Nav (hidden on mobile) */}
           <div className='hidden lg:flex gap-8 items-center'>
-            <a
+            <Link
               key='Home'
-              href='/'
+              to='/'
               className='nav-link w-max'
               style={{
                 fontWeight: pathname === '/' ? 500 : 400,
               }}
             >
               Home
-            </a>
+            </Link>
             {[
               { path: '/projects', label: 'Projects' },
               { path: '/about-me', label: 'About Me' },
               { path: '/contacts', label: 'Contacts' },
             ].map(({ path, label }) => (
-              <a
+              <Link
                 key={path}
-                href={path}
+                to={path}
                 className='nav-link w-max'
                 style={{
                   fontWeight:
@@ -112,7 +112,7 @@ export default function Navbar() {
                 }}
               >
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

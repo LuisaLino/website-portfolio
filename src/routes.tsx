@@ -26,6 +26,6 @@ export const router = createBrowserRouter(
     },
   ],
   {
-    basename: '/website-portfolio',
+    basename: import.meta.env.MODE === 'DEV' ? '' : '/website-portfolio',
   }
 );
