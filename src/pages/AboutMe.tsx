@@ -1,3 +1,14 @@
+import iconLavender from '../assets/images/Icon_Lavender.svg';
+import iconSky from '../assets/images/Icon_Sky.svg';
+import iconSand from '../assets/images/Icon_sand.svg';
+import imgGrid1 from '../assets/images/grid_image_1.png';
+import imgGrid2 from '../assets/images/grid_image_2.png';
+import imgGrid3 from '../assets/images/grid_image_3.png';
+import imgGrid4 from '../assets/images/grid_image_4.png';
+import imgGrid5 from '../assets/images/grid_image_5.png';
+import imgGrid6 from '../assets/images/grid_image_6.png';
+import imgLuisa from '../assets/images/luisa_lino_about.png';
+
 export default function AboutMe() {
   return (
     <div className='page-wrapper max-w-[1114px] mx-auto'>
@@ -6,10 +17,7 @@ export default function AboutMe() {
         <div className='section intro'>
           <div className='container'>
             <div className='flex lg:flex-row flex-col gap-5'>
-              <img
-                alt='luisa-lino-about-me'
-                src='src/assets/images/luisa_lino_about.png'
-              />
+              <img alt='luisa-lino-about-me' src={imgLuisa} />
               <div className='flex flex-col gap-6 max-w-[688px] justify-center'>
                 <div className='_50ch-headline-wrap'>
                   <h1>Welcome to my little corner of the internet! 👋🏽</h1>
@@ -51,7 +59,7 @@ export default function AboutMe() {
             <div className='grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-8'>
               <div className='flex flex-col gap-4'>
                 <img
-                  src='src/assets/images/Icon_Lavender.svg'
+                  src={iconLavender}
                   loading='lazy'
                   alt=''
                   className='w-12 h-12'
@@ -63,7 +71,7 @@ export default function AboutMe() {
               </div>
               <div className='flex flex-col gap-4'>
                 <img
-                  src='src/assets/images/Icon_Sky.svg'
+                  src={iconSky}
                   loading='lazy'
                   alt=''
                   className='w-12 h-12'
@@ -76,7 +84,7 @@ export default function AboutMe() {
 
               <div className='flex flex-col gap-4'>
                 <img
-                  src='src/assets/images/Icon_sand.svg'
+                  src={iconSand}
                   loading='lazy'
                   alt=''
                   className='w-12 h-12'
@@ -102,37 +110,37 @@ export default function AboutMe() {
                 <div className='row-span-2 col-span-1'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
-                    src='src/assets/images/grid_image_1.png'
+                    src={imgGrid1}
                   />
                 </div>
                 <div className='row-span-1 col-span-1'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
-                    src='src/assets/images/grid_image_2.png'
+                    src={imgGrid2}
                   />
                 </div>
                 <div className='row-span-1 col-span-1'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
-                    src='src/assets/images/grid_image_3.png'
+                    src={imgGrid3}
                   />
                 </div>
                 <div className='row-span-1 col-span-1'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
-                    src='src/assets/images/grid_image_4.png'
+                    src={imgGrid4}
                   />
                 </div>
                 <div className='row-span-2'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
-                    src='src/assets/images/grid_image_5.png'
+                    src={imgGrid5}
                   />
                 </div>
                 <div className='col-span-2'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
-                    src='src/assets/images/grid_image_6.png'
+                    src={imgGrid6}
                   />
                 </div>
               </div>
