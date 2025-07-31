@@ -10,6 +10,30 @@
 
 @font-face {
   font-family: Geist;
+  src: url('../fonts/Geist-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url('../fonts/Geist-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
+  src: url('../fonts/Geist-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geist;
   src: url('../fonts/Geist-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
@@ -97,10 +121,10 @@ body {
     var(--fluid-font-size--base),
     var(--fluid-font-size--base)
   );
-  background-color: var(--colors--stone);
   font-family: var(--secondary);
   margin: 0;
   scroll-behavior: smooth;
+  color: '#0C0C0C';
 }
 
 h1 {
@@ -327,6 +351,13 @@ figcaption {
   border-left-width: 2px;
 }
 
+@media screen and (max-width: 1200px) {
+  .container {
+    padding-right: var(--site-padding--tablet);
+    padding-left: var(--site-padding--tablet);
+  }
+}
+
 @media screen and (max-width: 991px) {
   h4 {
     font-size: 1.5rem;
@@ -354,11 +385,6 @@ figcaption {
 
   .rich-text h6 {
     font-size: var(--font-size--large);
-  }
-
-  .container {
-    padding-right: var(--site-padding--tablet);
-    padding-left: var(--site-padding--tablet);
   }
 
   .section {
@@ -498,10 +524,6 @@ figcaption {
 @media screen and (max-width: 479px) {
   h5 {
     font-weight: 400;
-  }
-
-  p {
-    margin-bottom: 0;
   }
 
   .rich-text h1 {

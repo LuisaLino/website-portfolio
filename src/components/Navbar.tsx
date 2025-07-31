@@ -31,7 +31,7 @@ export default function Navbar() {
         <div
           className='container-nav'
           style={{
-            backgroundColor: scrolled ? '#f6f6f6' : 'transparent',
+            backgroundColor: scrolled ? '#fff' : 'transparent',
             transition: 'all 300ms ease-in-out',
           }}
         >
@@ -119,8 +119,10 @@ export default function Navbar() {
       <div
         className={`bg-[#00000096] z-40 h-screen w-screen absolute top-0 right-0 transition-all duration-300 ease-in-out ${
           menuOpen ? '-translate-y-0' : '-translate-y-80'
-        }`}
-        style={{ opacity: menuOpen ? '1' : '0' }}
+        } ${menuOpen ? 'flex' : 'hidden'}`}
+        style={{
+          opacity: menuOpen ? '1' : '0',
+        }}
       ></div>
     </section>
   );
