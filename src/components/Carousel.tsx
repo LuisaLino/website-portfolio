@@ -1,11 +1,8 @@
 import { easeInOut, motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import image1 from '../assets/images/carousel_image_1.png';
-import image2 from '../assets/images/carousel_image_2.png';
-import imageVizzi from '../assets/images/carousel_image_vizzi.png';
+import { cards } from '../constants/project-card';
 import ArrowButton from './Button';
 import { ProjectItem } from './ProjectItem';
-import { type Colors } from './Tag/tag';
 
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef(null);
@@ -47,76 +44,3 @@ const HorizontalScrollCarousel = () => {
 };
 
 export default HorizontalScrollCarousel;
-
-const cards: Array<{
-  id: number;
-  link: string;
-  imgUrl: string;
-  title: string;
-  tags: Array<{ color: Colors; text: string }>;
-}> = [
-  {
-    link: '1',
-    imgUrl: image1,
-    title: 'Title Lorem ipsum egestas at in pellentesque eu.',
-    id: 1,
-    tags: [
-      {
-        text: 'Graphic Design',
-        color: 'pink',
-      },
-      {
-        text: 'UX/UI Design',
-        color: 'blue',
-      },
-    ],
-  },
-  {
-    link: '2',
-    imgUrl: image2,
-    title: 'Lorem ipsum egestas at in pellentesque eu.',
-    id: 2,
-    tags: [
-      {
-        text: 'Graphic Design',
-        color: 'pink',
-      },
-      {
-        text: 'UX/UI Design',
-        color: 'blue',
-      },
-    ],
-  },
-  {
-    link: 'vizzi-backoffice-ui-redesign',
-    imgUrl: imageVizzi,
-    title: 'Vizzi | Backoffice UI Redesign',
-    id: 3,
-    tags: [
-      {
-        text: 'Graphic Design',
-        color: 'pink',
-      },
-      {
-        text: 'UX/UI Design',
-        color: 'blue',
-      },
-    ],
-  },
-  {
-    link: '3',
-    imgUrl: image1,
-    title: 'Lorem ipsum egestas at in pellentesque eu.',
-    id: 4,
-    tags: [
-      {
-        text: 'Graphic Design',
-        color: 'pink',
-      },
-      {
-        text: 'UX/UI Design',
-        color: 'blue',
-      },
-    ],
-  },
-];

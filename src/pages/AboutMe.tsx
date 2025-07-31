@@ -1,3 +1,4 @@
+import LuisaCv from '../assets/LuisaLino-CV-2025.pdf';
 import iconLavender from '../assets/images/Icon_Lavender.svg';
 import iconSky from '../assets/images/Icon_Sky.svg';
 import iconSand from '../assets/images/Icon_sand.svg';
@@ -11,15 +12,15 @@ import imgLuisa from '../assets/images/luisa_lino_about.png';
 
 export default function AboutMe() {
   return (
-    <div className='page-wrapper max-w-[1114px] mx-auto'>
-      <div className='main-wrapper'>
+    <div className='page-wrapper max-w-7xl px-4 md:px-8 flex flex-col gap-8 mx-auto'>
+      <div className='main-wrapper '>
         {/* INTRO */}
-        <div className='section intro'>
-          <div className='container'>
-            <div className='flex lg:flex-row flex-col gap-5'>
-              <img alt='luisa-lino-about-me' src={imgLuisa} />
+        <div className='section'>
+          <div>
+            <div className='flex lg:flex-row flex-col-reverse gap-5'>
+              <img alt='luisa-lino-about-me' src={imgLuisa} className='lg:aspect-auto aspect-square rounded-lg object-cover' />
               <div className='flex flex-col gap-6 max-w-[688px] justify-center'>
-                <div className='_50ch-headline-wrap'>
+                <div className='max-w-[520px]'>
                   <h1>Welcome to my little corner of the internet! 👋🏽</h1>
                 </div>
                 <div className='flex flex-col gap-4 font-light text-lg md:text-xl tracking-normal'>
@@ -39,7 +40,7 @@ export default function AboutMe() {
                     meaningful user experiences.
                   </p>
                 </div>
-                <a className='md:text-2xl text-xl w-fit cursor-pointer'>
+                <a className='md:text-2xl text-xl w-fit cursor-pointer' target='_blank' href={LuisaCv}>
                   <div className='border-1 border-black rounded-lg px-6 py-3'>
                     View CV
                   </div>
@@ -98,46 +99,46 @@ export default function AboutMe() {
           </div>
         </div>
 
-        {/* DESIGN PHILOSOPHY */}
+        {/* WHEN I'M NOT DESIGNING */}
         <div className='py-[3rem] md:py-[5rem]'>
-          <div className='container'>
+          <div>
             <div>
               <div className='_50ch-headline-wrap mb-4 md:mb-8'>
                 <h2 className='display-2xl'>When I’m not designing...</h2>
               </div>
 
-              <div className='grid grid-cols-3 max-h-[920px] grid-rows-3 gap-x-5 gap-y-5'>
-                <div className='row-span-2 col-span-1'>
+              <div className='grid sm:grid-cols-3 max-h-[920px] sm:grid-rows-3 gap-x-5 gap-y-5'>
+                <div className='sm:row-span-2 sm:col-span-1' >
                   <img
-                    className='h-full w-full object-cover rounded-lg'
+                    className='h-full w-full object-cover aspect-square sm:aspect-auto rounded-lg'
                     src={imgGrid1}
                   />
                 </div>
-                <div className='row-span-1 col-span-1'>
+                <div className='row-span-1 col-span-1 hidden sm:flex'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
                     src={imgGrid2}
                   />
                 </div>
-                <div className='row-span-1 col-span-1'>
+                <div className='row-span-1 col-span-1 hidden sm:flex'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
                     src={imgGrid3}
                   />
                 </div>
-                <div className='row-span-1 col-span-1'>
+                <div className='row-span-1 col-span-1 hidden sm:flex'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
                     src={imgGrid4}
                   />
                 </div>
-                <div className='row-span-2'>
+                <div className='row-span-2 hidden sm:flex'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
                     src={imgGrid5}
                   />
                 </div>
-                <div className='col-span-2'>
+                <div className='col-span-2 hidden sm:flex'>
                   <img
                     className='h-full w-full object-cover rounded-lg'
                     src={imgGrid6}
@@ -150,9 +151,9 @@ export default function AboutMe() {
 
         {/* WHAT DIFFERENTIATES ME AS A DESIGNER  */}
         <div className='py-[3rem] md:py-[5rem]'>
-          <div className='container'>
-            <div className='_50ch-headline-wrap md:mb-4'>
-              <h2 className='display-2xl '>
+          <div>
+            <div className=' md:mb-8 mb-4'>
+              <h2 className='display-2xl'>
                 What Differentiates Me As a Designer
               </h2>
             </div>
@@ -160,9 +161,9 @@ export default function AboutMe() {
             <div className='grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-8'>
               {highlights.map((item) => (
                 <div className='flex flex-col gap-4'>
-                  <div className='flex flex-col gap-4 md:gap-6'>
-                    <div className='display-large'>{item.title}</div>
-                    <p>{item.description}</p>
+                  <div className='flex flex-col gap-4'>
+                    <div className='text-xl md:text-2xl'>{item.title}</div>
+                    <p className='font-light font-body'>{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -172,7 +173,7 @@ export default function AboutMe() {
 
         {/* WHAT DIFFERENTIATES ME AS A DESIGNER  */}
         <div className='py-[3rem] md:py-[5rem]'>
-          <div className='container'>
+          <div>
             <div>
               <div className='_50ch-headline-wrap mb-5 md:mb-8'>
                 <h2 className='display-2xl'>Testimonials</h2>
@@ -181,7 +182,7 @@ export default function AboutMe() {
               <div className='grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-5'>
                 {testimonials.map((item) => (
                   <div
-                    className='flex flex-col justify-between rounded-lg lg:h-[394px] gap-4 p-6'
+                    className='flex flex-col rounded-lg gap-4 p-6'
                     style={{ backgroundColor: `var(--colors-${item.color})` }}
                   >
                     <div className='flex flex-col gap-1'>
@@ -191,7 +192,7 @@ export default function AboutMe() {
                       </p>
                     </div>
                     <div>
-                      <p className='text-lg md:text-2xl'>
+                      <p className='text-lg md:text-xl font-light'>
                         “{item.testimonial}”
                       </p>
                     </div>
@@ -244,11 +245,11 @@ const highlights = [
 
 const testimonials = [
   {
-    name: 'Name Surname',
-    role: 'Role',
-    company: 'Company',
+    name: 'Jennifer Travanca',
+    role: 'Product Owner',
+    company: 'EVS Broadcast Equipment',
     testimonial:
-      'Lorem ipsum dolor sit amet consectetur. Felis nulla etlaoreet nunc. Mi ipsum tempus nulla hendrerit ut leo dolor quam aliquam. Ac urna pulvinar fames id pretium ac. Egestas lorem lobortis tempus tempor ut viverra dictum mattis.',
+      'Working with Luisa has been an incredibly enriching experience, both on a personal and professional level.  On a personal level, she’s a genuinely kind, positive person with contagious energy, which makes the work environment much more enjoyable. She’s someone you can truly rely on—always supportive, collaborative, and transparent in the way she communicates and works within a team.  Professionally, Luisa stands out for her dedication, attention to detail, and strong sense of responsibility. As a UX/UI designer, she has a sharp intuition for user needs and consistently applies a user-centered approach to her work.  She is proactive and takes real initiative in the projects she’s involved in. She’s not afraid to challenge ideas or ask questions in order to fully understand the broader context and strategic goals behind a project.  I truly enjoyed working with her, it was always smooth and collaborative, and I knew I could fully trust the quality and reliability of her work. Luisa brings value not only through her skills, but also through her mindset and presence on a team.',
     color: 'pink',
   },
   {

@@ -15,7 +15,7 @@ export default function Homepage() {
         <HorizontalScrollCarousel />
 
         {/* HOW I WORK SECTION */}
-        <div className='pt-[4px] mx-auto md:pb-[8rem] md:pt-[3rem] lg:!px-[165px] container'>
+        <div className='pt-[4px] mx-auto md:pb-[8rem] md:pt-[3rem] max-w-6xl px-4 md:px-20 py-20 md:py-24'>
           <div className='lg:grid lg:grid-cols-5 flex flex-col gap-8 '>
             <h4 className='col-span-2'>↳ How I work</h4>
             <div className='flex flex-col lg:flex-row lg:col-span-3 gap-12 lg:gap-20'>
@@ -48,8 +48,8 @@ export default function Homepage() {
       </div>
 
       {/* WHAT I DO SECTION */}
-      <div className='section'>
-        <div className='container'>
+      <div className='py-20 md:py-24'>
+        <div className='max-w-7xl mx-auto px-4 md:px-8 flex flex-col gap-8'>
           <h2 className='font-body md:!text-[40px] !text-3xl'>What I Do</h2>
           <div className='grid mx-auto grid-cols-1 md:grid-cols-2 gap-6'>
             <div className='service-cards-row grid grid-rows-2 gap-6'>
