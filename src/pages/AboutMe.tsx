@@ -18,7 +18,11 @@ export default function AboutMe() {
         <div className='section'>
           <div>
             <div className='flex lg:flex-row flex-col-reverse gap-5'>
-              <img alt='luisa-lino-about-me' src={imgLuisa} className='lg:aspect-auto aspect-square rounded-lg object-cover' />
+              <img
+                alt='luisa-lino-about-me'
+                src={imgLuisa}
+                className='lg:aspect-auto aspect-square rounded-lg object-cover'
+              />
               <div className='flex flex-col gap-6 max-w-[688px] justify-center'>
                 <div className='max-w-[520px]'>
                   <h1>Welcome to my little corner of the internet! 👋🏽</h1>
@@ -40,7 +44,11 @@ export default function AboutMe() {
                     meaningful user experiences.
                   </p>
                 </div>
-                <a className='md:text-2xl text-xl w-fit cursor-pointer' target='_blank' href={LuisaCv}>
+                <a
+                  className='md:text-2xl text-xl w-fit cursor-pointer'
+                  target='_blank'
+                  href={LuisaCv}
+                >
                   <div className='border-1 border-black rounded-lg px-6 py-3'>
                     View CV
                   </div>
@@ -108,7 +116,7 @@ export default function AboutMe() {
               </div>
 
               <div className='grid sm:grid-cols-3 max-h-[920px] sm:grid-rows-3 gap-x-5 gap-y-5'>
-                <div className='sm:row-span-2 sm:col-span-1' >
+                <div className='sm:row-span-2 sm:col-span-1'>
                   <img
                     className='h-full w-full object-cover aspect-square sm:aspect-auto rounded-lg'
                     src={imgGrid1}
@@ -193,7 +201,11 @@ export default function AboutMe() {
                     </div>
                     <div>
                       <p className='text-lg md:text-xl font-light'>
-                        “{item.testimonial}”
+                        {item.testimonial.split('\n\n').map((para, index) => (
+                          <p key={index} className='mb-4'>
+                            {para}
+                          </p>
+                        ))}
                       </p>
                     </div>
                   </div>
@@ -248,16 +260,29 @@ const testimonials = [
     name: 'Jennifer Travanca',
     role: 'Product Owner',
     company: 'EVS Broadcast Equipment',
-    testimonial:
-      'Working with Luisa has been an incredibly enriching experience, both on a personal and professional level.  On a personal level, she’s a genuinely kind, positive person with contagious energy, which makes the work environment much more enjoyable. She’s someone you can truly rely on—always supportive, collaborative, and transparent in the way she communicates and works within a team.  Professionally, Luisa stands out for her dedication, attention to detail, and strong sense of responsibility. As a UX/UI designer, she has a sharp intuition for user needs and consistently applies a user-centered approach to her work.  She is proactive and takes real initiative in the projects she’s involved in. She’s not afraid to challenge ideas or ask questions in order to fully understand the broader context and strategic goals behind a project.  I truly enjoyed working with her, it was always smooth and collaborative, and I knew I could fully trust the quality and reliability of her work. Luisa brings value not only through her skills, but also through her mindset and presence on a team.',
+    testimonial: `“Working with Luisa has been an incredibly enriching experience, both on a personal and professional level. 
+
+      On a personal level, she´s a genuinely kind, positive person with contagious energy, which makes the work environment much more enjoyable. She’s someone you can truly rely on—always supportive, collaborative, and transparent in the way she communicates and works within a team. 
+
+      Professionally, Luisa stands out for her dedication, attention to detail, and strong sense of responsibility. As a UX/UI designer, she has a sharp intuition for user needs and consistently applies a user-centered approach to her work. 
+
+      She is proactive and takes real initiative in the projects she’s involved in. She’s not afraid to challenge ideas or ask questions in order to fully understand the broader context and strategic goals behind a project. 
+
+      I truly enjoyed working with her, it was always smooth and collaborative, and I knew I could fully trust the quality and reliability of her work. Luisa brings value not only through her skills, but also through her mindset and presence on a team.”`,
     color: 'pink',
   },
   {
-    name: 'Name Surname',
-    role: 'Role',
-    company: 'Company',
-    testimonial:
-      'Lorem ipsum dolor sit amet consectetur. Felis nulla etlaoreet nunc. Mi ipsum tempus nulla hendrerit ut leo dolor quam aliquam. Ac urna pulvinar fames id pretium ac. Egestas lorem lobortis tempus tempor ut viverra dictum mattis.',
+    name: 'Alexandre Ulisses',
+    role: 'Chief Innovation Officer',
+    company: 'MOG Technologies',
+    testimonial: `“The worst thing that one can say about Luisa is that she is a wonderful human being and a professional that excels in everything that she does. 
+
+During the time that we worked together, she always demonstrated a great generosity and commitment.
+Her design and UX work is aesthetically elegant and focus on a simplicity of usage.
+
+It is a work that is widely available to thousands of students and that demonstrates her passion about media and education.  
+
+She always bring heart to every project and soul to every solution.”`,
     color: 'blue',
   },
 ];

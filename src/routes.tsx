@@ -1,12 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom';
-import MainLayout from './components/MainLayout';
+import MainLayout from './layouts/MainLayout';
+import ProjectsLayout from './layouts/ProjectsLayout';
 import NotFound from './pages/404';
 import AboutMe from './pages/AboutMe';
 import Homepage from './pages/Home';
-import Projects from './pages/Projects';
-import S4NG from './pages/S4NG';
-import ViaMap from './pages/ViaMap';
-import Vizzi from './pages/Vizzi';
+import Projects from './pages/Projects/Projects';
+import S4NG from './pages/Projects/S4NG';
+import ViaMap from './pages/Projects/ViaMap';
+import Vizzi from './pages/Projects/Vizzi';
 
 export const router = createBrowserRouter(
   [
@@ -29,15 +30,20 @@ export const router = createBrowserRouter(
               index: true,
               element: <Projects />,
             },
-            { path: 'via-map-workflow-designer', element: <ViaMap /> },
-            { path: 'vizzi-bacloffice-ui-redesign', element: <Vizzi /> },
             {
-              path: 's4ng-uporto-accessible-platform',
-              element: <S4NG />,
-            },
-            {
-              path: 'true-project-platform-for-creating-school-newspapers',
-              element: <Vizzi />,
+              element: <ProjectsLayout />,
+              children: [
+                { path: 'via-map-workflow-designer', element: <ViaMap /> },
+                { path: 'vizzi-bacloffice-ui-redesign', element: <Vizzi /> },
+                {
+                  path: 's4ng-uporto-accessible-platform',
+                  element: <S4NG />,
+                },
+                {
+                  path: 'true-project-platform-for-creating-school-newspapers',
+                  element: <Vizzi />,
+                },
+              ],
             },
           ],
         },

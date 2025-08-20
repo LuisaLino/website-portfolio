@@ -1,5 +1,5 @@
-import { ProjectItem } from '../components/ProjectItem';
-import { cards } from '../constants/project-card';
+import { ProjectItem } from '../../components/ProjectItem';
+import { cards } from '../../constants/project-card';
 
 export default function Projects() {
   return (
