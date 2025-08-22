@@ -70,7 +70,7 @@ export default function Footer() {
                     <CustomLinkText buttonText='Home' />
                   </Link>
                   <Link to='/projects' className={textWrapper}>
-                    <CustomLinkText buttonText='Project' />
+                    <CustomLinkText buttonText='Projects' />
                   </Link>
                   <Link to='/about-me' className={textWrapper}>
                     <CustomLinkText buttonText='About me' />

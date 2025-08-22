@@ -34,7 +34,7 @@ export const cards: Array<{
   {
     link: 'vizzi-bacloffice-ui-redesign',
     imgUrl: imageVizzi,
-    title: 'Lorem ipsum egestas at in pellentesque eu.',
+    title: 'Vizzi | Backoffice UI Redesign',
     id: 2,
     tags: [
       {

@@ -6,6 +6,7 @@ import AboutMe from './pages/AboutMe';
 import Homepage from './pages/Home';
 import Projects from './pages/Projects/Projects';
 import S4NG from './pages/Projects/S4NG';
+import TrueProject from './pages/Projects/TrueProject';
 import ViaMap from './pages/Projects/ViaMap';
 import Vizzi from './pages/Projects/Vizzi';
 
@@ -41,7 +42,7 @@ export const router = createBrowserRouter(
                 },
                 {
                   path: 'true-project-platform-for-creating-school-newspapers',
-                  element: <Vizzi />,
+                  element: <TrueProject />,
                 },
               ],
             },
