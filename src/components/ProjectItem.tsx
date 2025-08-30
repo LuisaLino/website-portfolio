@@ -25,9 +25,14 @@ export const ProjectItem = ({
           fullWidth && 'lg:w-full'
         )}
       >
-        <div className='absolute top-4 left-4 flex gap-2'>
+        <div className='absolute top-4 md:left-4 left-3 flex gap-2'>
           {card.tags.map((item) => (
-            <Tag color={item.color} text={item.text} small />
+            <Tag
+              color={item.color}
+              text={item.text}
+              small
+              key={`project_item_${item.text}`}
+            />
           ))}
         </div>
         <div

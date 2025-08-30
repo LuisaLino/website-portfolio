@@ -1,6 +1,12 @@
 import Tag, { type Colors } from '../../components/Tag/tag';
 
-export default function ProjectDetails({ data, children }) {
+export default function ProjectDetails({
+  data,
+  children,
+}: {
+  data: any;
+  children: any;
+}) {
   return (
     <div className='min-h-screen'>
       {/* Header */}
@@ -17,7 +23,9 @@ export default function ProjectDetails({ data, children }) {
         </div>
 
         <div className='flex md:flex-row flex-col gap-6 justify-between md:items-center'>
-          <h1 className='text-4xl font-normal leading-tight'>{data.title}</h1>
+          <h1 className='text-4xl font-normal leading-tight  max-w-[750px]'>
+            {data.title}
+          </h1>
           <div className='md:text-right'>
             <p>
               {data.type} — {data.year}

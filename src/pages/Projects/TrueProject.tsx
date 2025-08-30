@@ -69,15 +69,15 @@ export default function TrueProject() {
         </h3>
         <div className='grid grid-cols-2 gap-6'>
           <img
-            className='lg:aspect-auto col-span-2 aspect-square object-cover'
+            className='lg:aspect-auto lg:rounded-none rounded col-span-2 aspect-square object-cover'
             src={img1}
           />
           <img
-            className='lg:aspect-auto aspect-square object-cover'
+            className='lg:aspect-auto lg:rounded-none rounded aspect-square object-cover'
             src={img2}
           />
           <img
-            className='lg:aspect-auto aspect-square object-cover'
+            className='lg:aspect-auto lg:rounded-none rounded aspect-square object-cover'
             src={img3}
           />
         </div>
@@ -93,23 +93,11 @@ export default function TrueProject() {
           School Profile, Contacts, Headline Template, and Sections Template all
           in one place.
         </p>
-        <div className='grid grid-cols-2'>
-          <img
-            className='lg:aspect-auto aspect-square object-cover'
-            src={interface1}
-          />
-          <img
-            className='lg:aspect-auto aspect-square object-cover'
-            src={interface2}
-          />
-          <img
-            className='lg:aspect-auto aspect-square object-cover'
-            src={interface3}
-          />
-          <img
-            className='lg:aspect-auto aspect-square object-cover'
-            src={interface4}
-          />
+        <div className='grid md:grid-cols-2 '>
+          <img className='object-cover' src={interface1} />
+          <img className='object-cover' src={interface2} />
+          <img className='object-cover' src={interface3} />
+          <img className='object-cover' src={interface4} />
         </div>
       </div>
 
@@ -119,7 +107,7 @@ export default function TrueProject() {
           Backoffice Interface
         </h3>
         <img
-          className='lg:aspect-auto aspect-square object-cover'
+          className='lg:aspect-auto aspect-square object-cover rounded-lg'
           src={backofficeInterface}
         />
       </div>
@@ -129,17 +117,14 @@ export default function TrueProject() {
         <h3 className='!text-2xl font-body font-semibold mb-6'>
           Template Example
         </h3>
-        <img
-          className='lg:aspect-auto aspect-square object-cover'
-          src={templateExample}
-        />
+        <img className='object-cover rounded-lg' src={templateExample} />
       </div>
     </ProjectDetails>
   );
 }
 
 const data = {
-  title: 'True Project | Platform for Creating School Newspapers  ',
+  title: 'True Project | Platform for Creating School Newspapers',
   headerImg,
   type: 'Education',
   year: '2021',

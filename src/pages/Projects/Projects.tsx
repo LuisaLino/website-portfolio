@@ -8,7 +8,7 @@ export default function Projects() {
         <div className='md:py-[8rem] py-[6rem]'>
           <div className='px-4'>
             <div className='_50ch-headline-wrap md:mb-8 mb-6'>
-              <h1 className='md:!text-5xl !text-3xl md:!leading-14 leading-10'>
+              <h1 className='md:!text-3xl !text-xl md:!leading-13 leading-9'>
                 Selected Projects
               </h1>
             </div>

@@ -39,7 +39,11 @@ export default function Hero() {
               </h1>
               <div className='flex flex-wrap justify-center items-center gap-3 lg:max-w-[924px]'>
                 {tags.map((tag) => (
-                  <Tag color={tag.color} text={tag.text} />
+                  <Tag
+                    color={tag.color}
+                    text={tag.text}
+                    key={`hero_${tag.text}`}
+                  />
                 ))}
               </div>
             </div>
