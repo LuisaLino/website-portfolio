@@ -13,7 +13,7 @@ export default function Projects() {
               </h1>
             </div>
 
-            <div className='pt-[4px] pb-[4rem] md:pb-[8rem] md:pt-[3rem]'>
+            <div className='pt-[4px] pb-[4rem] md:pb-[8rem] md:pt-[3rem] md:pl-28 pl-0'>
               <div className='lg:grid lg:grid-cols-5 flex flex-col gap-4 md:gap-8 '>
                 <h4 className='col-span-2 font-title'>↳ My work</h4>
                 <div className='flex flex-col lg:flex-row lg:col-span-3 gap-12 lg:gap-20'>

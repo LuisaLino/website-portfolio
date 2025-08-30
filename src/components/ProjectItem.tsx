@@ -14,7 +14,7 @@ export const ProjectItem = ({
     title: string;
     tags: Array<{ color: Colors; text: string }>;
   };
-  fullWidth: boolean;
+  fullWidth?: boolean;
 }) => {
   return (
     <Link to={`/projects/${card.link}`}>

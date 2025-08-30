@@ -1,8 +1,13 @@
+import backofficeInterface from '../../assets/images/True/Backoffice-Interface.png';
+import interface1 from '../../assets/images/True/Interface-1.png';
+import interface2 from '../../assets/images/True/Interface-2.png';
+import interface3 from '../../assets/images/True/Interface-3.png';
+import interface4 from '../../assets/images/True/Interface-4.png';
+import templateExample from '../../assets/images/True/Template-Example.png';
 import headerImg from '../../assets/images/True/True-Header.png';
-import img1 from '../../assets/images/Via-Map/Via-Map-1.png';
-import img2 from '../../assets/images/Via-Map/Via-Map-2.png';
-import img3 from '../../assets/images/Via-Map/Via-Map-3.png';
-import img4 from '../../assets/images/Via-Map/Via-Map-4.png';
+import img1 from '../../assets/images/True/True-Project-1.png';
+import img2 from '../../assets/images/True/True-Project-2.png';
+import img3 from '../../assets/images/True/True-Project-3.png';
 import ProjectDetails from './ProjectDetails';
 
 export default function TrueProject() {
@@ -62,6 +67,20 @@ export default function TrueProject() {
         <h3 className='!text-2xl font-body font-semibold mb-6'>
           Visual Identity
         </h3>
+        <div className='grid grid-cols-2 gap-6'>
+          <img
+            className='lg:aspect-auto col-span-2 aspect-square object-cover'
+            src={img1}
+          />
+          <img
+            className='lg:aspect-auto aspect-square object-cover'
+            src={img2}
+          />
+          <img
+            className='lg:aspect-auto aspect-square object-cover'
+            src={img3}
+          />
+        </div>
       </div>
 
       {/* Configuration Interface */}
@@ -74,104 +93,46 @@ export default function TrueProject() {
           School Profile, Contacts, Headline Template, and Sections Template all
           in one place.
         </p>
+        <div className='grid grid-cols-2'>
+          <img
+            className='lg:aspect-auto aspect-square object-cover'
+            src={interface1}
+          />
+          <img
+            className='lg:aspect-auto aspect-square object-cover'
+            src={interface2}
+          />
+          <img
+            className='lg:aspect-auto aspect-square object-cover'
+            src={interface3}
+          />
+          <img
+            className='lg:aspect-auto aspect-square object-cover'
+            src={interface4}
+          />
+        </div>
       </div>
 
-      {/* High-Fidelity Snapshots */}
+      {/* Backoffice Interface */}
       <div className='flex flex-col gap-3 mb-16'>
-        <h3 className='!text-xl !font-bold font-body text-[#565656] mb-6'>
-          High-Fidelity Snapshots
+        <h3 className='!text-2xl font-body font-semibold mb-6'>
+          Backoffice Interface
         </h3>
-
-        <div className='space-y-3 mb-6'>
-          <div className='flex items-start'>
-            <span className='font-title mr-3'>→</span>
-            <span className='text-lg leading-tight font-light'>
-              Workflow steps are color-coded by type and status
-            </span>
-          </div>
-          <div className='flex items-start'>
-            <span className='font-title mr-3'>→</span>
-            <span className='text-lg leading-tight font-light'>
-              Step configuration is inline and contextual
-            </span>
-          </div>
-          <div className='flex items-start'>
-            <span className='font-title mr-3'>→</span>
-            <span className='text-lg leading-tight font-light'>
-              Workflow logic is easily scannable and editable
-            </span>
-          </div>
-        </div>
-
-        <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
-          {data.images.map((item, index) => (
-            <div key={index} className='text-center'>
-              <img src={item.src} />
-              <p className='text-sm text-gray-700'>{item.caption}</p>
-            </div>
-          ))}
-        </div>
+        <img
+          className='lg:aspect-auto aspect-square object-cover'
+          src={backofficeInterface}
+        />
       </div>
 
-      {/* What Went Well & Opportunities */}
-      <div className='flex flex-col gap-16 mb-16'>
-        <div>
-          <h3 className='!text-2xl font-body font-semibold !mb-6'>
-            What Went Well
-          </h3>
-          <div className='space-y-3'>
-            <div className='flex items-start'>
-              <span className='font-title mr-3'>→</span>
-              <span className='text-lg leading-tight font-light'>
-                Fast and intuitive workflow creation
-              </span>
-            </div>
-            <div className='flex items-start'>
-              <span className='font-title mr-3'>→</span>
-              <span className='text-lg leading-tight font-light'>
-                Visual logic helped bridge technical and non-technical users
-              </span>
-            </div>
-            <div className='flex items-start'>
-              <span className='font-title mr-3'>→</span>
-              <span className='text-lg leading-tight font-light'>
-                Onboarding became easier with visual guidance
-              </span>
-            </div>
-            <div className='flex items-start'>
-              <span className='font-title mr-3'>→</span>
-              <span className='text-lg leading-tight font-light'>
-                Strong collaboration with PO/PMs kept scope aligned with needs
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h3 className='!text-2xl font-body font-semibold !mb-6'>
-            Opportunities for Improvement
-          </h3>
-          <div className='space-y-3'>
-            <div className='flex items-start'>
-              <span className='font-title mr-3'>→</span>
-              <span className='text-lg leading-tight font-light'>
-                Simplify step configuration (esp. inputs/outputs)
-              </span>
-            </div>
-            <div className='flex items-start'>
-              <span className='font-title mr-3'>→</span>
-              <span className='text-lg leading-tight font-light'>
-                Add a "simple" vs "advanced" editing mode
-              </span>
-            </div>
-            <div className='flex items-start'>
-              <span className='font-title mr-3'>→</span>
-              <span className='text-lg leading-tight font-light'>
-                More usability testing in production contexts
-              </span>
-            </div>
-          </div>
-        </div>
+      {/* Template Example */}
+      <div className='flex flex-col gap-3 mb-16'>
+        <h3 className='!text-2xl font-body font-semibold mb-6'>
+          Template Example
+        </h3>
+        <img
+          className='lg:aspect-auto aspect-square object-cover'
+          src={templateExample}
+        />
       </div>
     </ProjectDetails>
   );
@@ -200,25 +161,6 @@ const data = {
     {
       text: 'UX/UI Design',
       color: 'blue',
-    },
-  ],
-  images: [
-    {
-      src: img1,
-      caption: 'Fully embedded within the VIA-MAP ecosystem.',
-    },
-    {
-      src: img2,
-      caption:
-        'New workflow initialized with input and output nodes pre-placed.',
-    },
-    {
-      src: img3,
-      caption: 'Visual representation of multiple task types in a workflow.',
-    },
-    {
-      src: img4,
-      caption: 'Example of a complete and correctly connected workflow.',
     },
   ],
   reflection:

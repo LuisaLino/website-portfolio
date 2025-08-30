@@ -5,7 +5,6 @@ import './navbar.css';
 const links = [
   { path: '/projects', label: 'Projects' },
   { path: '/about-me', label: 'About Me' },
-  { path: '/contacts', label: 'Contacts' },
 ];
 
 export default function Navbar() {
@@ -29,7 +28,7 @@ export default function Navbar() {
     <section id='Nav' className='navigation relative'>
       <article className='nav-bar z-50'>
         <div
-          className='container-nav'
+          className='container-nav max-w-[1700px] mx-auto'
           style={{
             backgroundColor: scrolled ? '#fff' : 'transparent',
             transition: 'all 300ms ease-in-out',

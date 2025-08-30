@@ -75,10 +75,6 @@ export default function Footer() {
                   <Link to='/about-me' className={textWrapper}>
                     <CustomLinkText buttonText='About me' />
                   </Link>
-
-                  <Link to='/contacts' className={textWrapper}>
-                    <CustomLinkText buttonText='Contacts' />
-                  </Link>
                 </div>
               </div>
             </div>
