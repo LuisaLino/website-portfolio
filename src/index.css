@@ -112,6 +112,10 @@
   font-family: var(--primary);
 }
 
+html {
+  scroll-behavior: auto; /* Ensures instant scrolling */
+}
+
 body {
   letter-spacing: 0em;
   font-weight: 400;
@@ -123,7 +127,6 @@ body {
   );
   font-family: var(--secondary);
   margin: 0;
-  scroll-behavior: smooth;
   color: '#0C0C0C';
 }
 

@@ -1,4 +1,5 @@
 import ArrowButton from '../components/Button';
+import { default as HorizontalScrollCarousel } from '../components/Carousel';
 import Hero from '../components/Hero';
 import { ProjectItem } from '../components/ProjectItem';
 import { cards } from '../constants/project-card';
@@ -14,7 +15,7 @@ export default function Homepage() {
       <Hero />
 
       <div className='page-wrapper max-w-[1700px] mx-auto md:flex hidden'>
-        {/* <HorizontalScrollCarousel /> */}
+        <HorizontalScrollCarousel />
       </div>
 
       <div className='px-4 md:hidden flex flex-col my-[8rem] gap-4'>

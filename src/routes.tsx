@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import MainLayout from './layouts/MainLayout';
 import ProjectsLayout from './layouts/ProjectsLayout';
 import NotFound from './pages/404';
@@ -14,7 +15,12 @@ export const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <MainLayout />,
+      element: (
+        <>
+          <ScrollToTop />
+          <MainLayout />
+        </>
+      ),
       children: [
         {
           index: true,
