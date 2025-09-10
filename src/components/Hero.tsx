@@ -45,8 +45,8 @@ export default function Hero() {
                   areas of specialization are:
                 </span>
                 <span className='md:hidden flex'>
-                  <br /> I design with intention, empathy, and an eye for
-                  detail. My areas of specialization are:
+                  I design with intention, empathy, and an eye for detail. My
+                  areas of specialization are:
                 </span>
               </h1>
               <div className='flex flex-wrap justify-center items-center gap-3 lg:max-w-[924px]'>
