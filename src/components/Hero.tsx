@@ -32,15 +32,21 @@ export default function Hero() {
               <h1 className='max-w-[840px] md:!text-[42px] !text-3xl md:!leading-12 leading-10'>
                 Hi!{' '}
                 <span>
-                  <img loading='lazy' src={luisaImg} alt='luisa-lino-image' />
+                  <img
+                    loading='lazy'
+                    src={luisaImg}
+                    alt='luisa-lino-image'
+                    className='max-h-[48px]'
+                  />
                 </span>{' '}
+                My name is Luísa.
                 <span className='hidden md:flex'>
-                  My name is Luísa. I design with intention, empathy, and an eye
-                  for detail. My areas of specialization are:
+                  I design with intention, empathy, and an eye for detail. My
+                  areas of specialization are:
                 </span>
                 <span className='md:hidden flex'>
-                  My name is Luísa. <br /> I design with intention, empathy, and
-                  an eye for detail. My areas of specialization are:
+                  <br /> I design with intention, empathy, and an eye for
+                  detail. My areas of specialization are:
                 </span>
               </h1>
               <div className='flex flex-wrap justify-center items-center gap-3 lg:max-w-[924px]'>
