@@ -23,7 +23,7 @@ export default function ProjectDetails({
         </div>
 
         <div className='flex md:flex-row flex-col gap-6 justify-between md:items-center'>
-          <h1 className='text-4xl font-normal leading-tight  max-w-[750px]'>
+          <h1 className='font-normal max-w-[750px] md:!text-[42px] !text-3xl md:!leading-12 leading-10'>
             {data.title}
           </h1>
           <div className='md:text-right'>

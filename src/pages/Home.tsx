@@ -32,7 +32,7 @@ export default function Homepage() {
 
       <div className='page-wrapper max-w-[1700px] px-4 md:px-6 flex flex-col gap-8 mx-auto'>
         {/* HOW I WORK SECTION */}
-        <div className='pt-[4px] md:pb-[8rem] md:pt-[3rem] px-4 md:px-20 py-20 md:py-24'>
+        <div className='pt-[4px] md:pb-[8rem] md:pt-[3rem] md:px-20 py-20 md:py-24'>
           <div className='lg:grid lg:grid-cols-5 flex flex-col gap-8 '>
             <h4 className='col-span-2'>↳ How I work</h4>
             <div className='flex flex-col lg:flex-row lg:col-span-3 gap-12 lg:gap-20'>

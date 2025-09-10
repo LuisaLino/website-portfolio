@@ -105,48 +105,36 @@ export default function AboutMe() {
 
         {/* DESIGN PHILOSOPHY */}
         <div className='py-[3rem] md:py-[5rem]'>
-          <div className='container '>
-            <div className='_50ch-headline-wrap md:mb-8'>
-              <h2 className='display-2xl'>Design Philosophy</h2>
+          <div className='_50ch-headline-wrap md:mb-8'>
+            <h2 className='display-2xl'>Design Philosophy</h2>
+          </div>
+
+          <div className='grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-8'>
+            <div className='flex flex-col gap-4'>
+              <img
+                src={iconLavender}
+                loading='lazy'
+                alt=''
+                className='w-12 h-12'
+              />
+              <div className='flex flex-col gap-4 md:gap-6'>
+                <div className='display-large'>{philosophy[0].title}</div>
+                <p>{philosophy[0].description}</p>
+              </div>
+            </div>
+            <div className='flex flex-col gap-4'>
+              <img src={iconSky} loading='lazy' alt='' className='w-12 h-12' />
+              <div className='flex flex-col gap-4 md:gap-6'>
+                <div className='display-large'>{philosophy[1].title}</div>
+                <p>{philosophy[1].description}</p>
+              </div>
             </div>
 
-            <div className='grid grid-cols-1 grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-8'>
-              <div className='flex flex-col gap-4'>
-                <img
-                  src={iconLavender}
-                  loading='lazy'
-                  alt=''
-                  className='w-12 h-12'
-                />
-                <div className='flex flex-col gap-4 md:gap-6'>
-                  <div className='display-large'>{philosophy[0].title}</div>
-                  <p>{philosophy[0].description}</p>
-                </div>
-              </div>
-              <div className='flex flex-col gap-4'>
-                <img
-                  src={iconSky}
-                  loading='lazy'
-                  alt=''
-                  className='w-12 h-12'
-                />
-                <div className='flex flex-col gap-4 md:gap-6'>
-                  <div className='display-large'>{philosophy[1].title}</div>
-                  <p>{philosophy[1].description}</p>
-                </div>
-              </div>
-
-              <div className='flex flex-col gap-4'>
-                <img
-                  src={iconSand}
-                  loading='lazy'
-                  alt=''
-                  className='w-12 h-12'
-                />
-                <div className='flex flex-col gap-4 md:gap-6'>
-                  <div className='display-large'>{philosophy[2].title}</div>
-                  <p>{philosophy[2].description}</p>
-                </div>
+            <div className='flex flex-col gap-4'>
+              <img src={iconSand} loading='lazy' alt='' className='w-12 h-12' />
+              <div className='flex flex-col gap-4 md:gap-6'>
+                <div className='display-large'>{philosophy[2].title}</div>
+                <p className='max-w-[290px]'>{philosophy[2].description}</p>
               </div>
             </div>
           </div>
