@@ -5,6 +5,6 @@ import { defineConfig } from 'vite';
 export default () => {
   return defineConfig({
     plugins: [react(), tailwindcss()],
-    base: '/website-portfolio',
+    base: '/',
   });
 };
