@@ -13,7 +13,7 @@ import vizziDashboard5 from '../assets/images/Vizzi/Vizzi-Backoffice-Dashboard-1
 import vizziDashboard6 from '../assets/images/Vizzi/Vizzi-Backoffice-Dashboard-1-6.png';
 
 import { Link } from 'react-router-dom';
-import Tag from '../components/Tag/tag';
+import Tag, { type Colors } from '../components/Tag/tag';
 
 import HighFidelity1 from '../assets/images/S4NG/high-fidelity-1.png';
 import HighFidelity2 from '../assets/images/S4NG/high-fidelity-2.png';
@@ -61,7 +61,12 @@ export default function S4NG() {
         <div className='mb-12'>
           <div className='flex gap-3 mb-8'>
             {data.tags.map((item, index) => (
-              <Tag key={index} color={item.color} text={item.text} small />
+              <Tag
+                key={index}
+                color={item.color as Colors}
+                text={item.text}
+                small
+              />
             ))}
           </div>
 

@@ -4,7 +4,7 @@ import img2 from '../assets/images/Via-Map/Via-Map-2.png';
 import img3 from '../assets/images/Via-Map/Via-Map-3.png';
 import img4 from '../assets/images/Via-Map/Via-Map-4.png';
 import headerImg from '../assets/images/Via-Map/via-map-header.png';
-import Tag from '../components/Tag/tag';
+import Tag, { type Colors } from '../components/Tag/tag';
 
 export default function ViaMap() {
   return (
@@ -19,7 +19,7 @@ export default function ViaMap() {
         <div className='mb-12'>
           <div className='flex gap-3 mb-8'>
             {data.tags.map((item) => (
-              <Tag color={item.color} text={item.text} small />
+              <Tag color={item.color as Colors} text={item.text} small />
             ))}
           </div>
 

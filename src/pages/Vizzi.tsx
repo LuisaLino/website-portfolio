@@ -17,7 +17,7 @@ import headerImg from '../assets/images/Vizzi/Vizzi-Header.png';
 import vizziHighFidelity from '../assets/images/Vizzi/Vizzi-High-Fidelity.png';
 import newBackoffice from '../assets/images/Vizzi/Vizzi-New-Backoffice.png';
 import oldBackoffice from '../assets/images/Vizzi/Vizzi-Old-Backoffice.png';
-import Tag from '../components/Tag/tag';
+import Tag, { type Colors } from '../components/Tag/tag';
 
 export default function Vizzi() {
   return (
@@ -32,7 +32,12 @@ export default function Vizzi() {
         <div className='mb-12'>
           <div className='flex gap-3 mb-8'>
             {data.tags.map((item, index) => (
-              <Tag key={index} color={item.color} text={item.text} small />
+              <Tag
+                key={index}
+                color={item.color as Colors}
+                text={item.text}
+                small
+              />
             ))}
           </div>
 
