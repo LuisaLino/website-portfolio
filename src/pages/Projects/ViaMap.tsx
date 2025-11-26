@@ -2,7 +2,7 @@ import img1 from '../../assets/images/Via-Map/Via-Map-1.png';
 import img2 from '../../assets/images/Via-Map/Via-Map-2.png';
 import img3 from '../../assets/images/Via-Map/Via-Map-3.png';
 import img4 from '../../assets/images/Via-Map/Via-Map-4.png';
-import headerImg from '../../assets/images/Via-Map/via-map-header.png';
+import headerImg from '../../assets/images/Via-Map/Via-Map-Header.png';
 import ProjectDetails from './ProjectDetails';
 
 export default function ViaMap() {
