@@ -20,7 +20,7 @@ const HorizontalScrollCarousel = () => {
       className='relative md:py-30 h-[300vh] md:h-[400vh]'
     >
       <div className='sticky top-0 flex flex-col h-screen  justify-center items-start overflow-hidden'>
-        <div className='flex max-w-screen w-[100%] md:px-8 px-4 items-center justify-between'>
+        <div className='flex max-w-screen w-[100%] md:px-6 px-4 items-center justify-between'>
           <h2 className='md:!text-[40px] !text-3xl font-body'>
             Selected Projects
           </h2>
