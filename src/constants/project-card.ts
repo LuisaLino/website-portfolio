@@ -1,7 +1,7 @@
 import imageS4ANG from '../assets/images/S4NG/S4NG-Preview.png';
-import imageTrue from '../assets/images/True/True-Cover.png';
+import imageTrue from '../assets/images/True/True-cover.png';
 import imageViaMap from '../assets/images/Via-Map/Via-Map-Cover.png';
-import imageVizzi from '../assets/images/Vizzi/Vizzi-Cover.png';
+import imageVizzi from '../assets/images/Vizzi/Vizzi-cover.png';
 import type { Colors } from '../components/Tag/tag';
 
 export const cards: Array<{
