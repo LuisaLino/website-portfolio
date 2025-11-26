@@ -32,7 +32,7 @@ export default function Projects() {
 
             <div className='grid md:grid-cols-2 grid-cols-1 md:gap-y-22 gap-y-7 gap-x-5'>
               {cards.map((item) => (
-                <ProjectItem card={item} fullWidth />
+                <ProjectItem card={item} key={item.title} fullWidth />
               ))}
             </div>
           </div>

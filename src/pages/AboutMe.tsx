@@ -12,8 +12,16 @@ import imgLuisa from '../assets/images/luisa_lino_about.png';
 
 import { useState } from 'react';
 
+interface Testimonial {
+  name: string;
+  role: string;
+  company: string;
+  testimonial: string;
+  color: string;
+}
+
 // Testimonial component with read more functionality
-function TestimonialCard({ testimonial }) {
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Split testimonial into sentences and determine truncation point
@@ -105,7 +113,7 @@ export default function AboutMe() {
 
         {/* DESIGN PHILOSOPHY */}
         <div className='py-[3rem] md:py-[5rem]'>
-          <div className='_50ch-headline-wrap md:mb-8'>
+          <div className='_50ch-headline-wrap mb-4 md:mb-8'>
             <h2 className='display-2xl'>Design Philosophy</h2>
           </div>
 
